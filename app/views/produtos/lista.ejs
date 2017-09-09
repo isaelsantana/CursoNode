@@ -1,0 +1,31 @@
+<meta charset="UTF-8" />
+<html>
+
+<head>
+    <title>Livros</title>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <td>Id</td>
+            <td>Nome</td>
+            <td>Descrição</td>
+        </tr>
+        <%for(var cont=0;cont<lista.length;cont++) {%>
+            <tr>
+                <td>
+                    <%=lista[cont].id%>
+                </td>
+                <td>
+                    <%=lista[cont].nome%>
+                </td>
+                <td>
+                    <%=lista[cont].descricao%>
+                </td>
+            </tr>
+            <%}%>
+    </table>
+</body>
+
+</html>

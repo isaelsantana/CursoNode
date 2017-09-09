@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Cadastro de Livro</title>
+</head>
+
+<body>
+    <div id="erros">
+        <%if(ValidaitonErros) {%>
+            <ul>
+            <%for(var i = 0; i<ValidaitonErros.length;i++){ %>
+                <li><%= ValidaitonErros[i].param %> - <%= ValidaitonErros[i].msg %></li>
+            <%}%>
+            </ul>
+        <%}%>
+    </div>
+    <form action="/produtos" method="post">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" value="<%= produto.nome %>" placeholder="Digite o titulo aqui">
+        </div>
+        <div>
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao" id="descricao" value="<%= produto.descricao %>" placeholder="digite a descrição aqui">
+        </div>
+
+        <input type="submit" value="Gravar" />
+    </form>
+</body>
+
+</html>
